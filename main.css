@@ -17,6 +17,8 @@ body {
 .nav {
     min-height: 42px;
     background-color: #EF5122;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-list {
@@ -41,12 +43,16 @@ body {
 
 .form__row {
     padding: 8px 0;
+    display: flex;
 }
 
 .form__label {
+    /* set then nay 90px chieu ngang de day input sang phai cho deu nhauset then nay 90px chieu ngang de day input sang phai cho deu nhau */
+    min-width: 90px; 
 }
 
 .form__input {
+    flex: 1;
 }
 
 /* Column layout */
@@ -54,35 +60,46 @@ body {
     margin-top: 36px;
     padding: 12px 0;
     background-color: #fff;
+    display: inline-flex;
 }
 
 .column-item {
     padding: 0 16px;
+    /* flex-basis: 30%; */
+
 }
 
 .sidebar-one {
+    flex: 1;
 }
 
 .sidebar-two {
+    flex: 1;
 }
 
 .main-column {
+    flex: 3;
 }
 
 /* Feature layout */
 .feature-layout {
     margin-top: 36px;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-direction: column
 }
 
 /* PC, Tablet */
 @media (min-width: 740px) {
     .feature-layout {
+        flex-direction: row;
     }
 }
 
 .feature-item {
     padding: 12px 16px;
     margin-top: 16px;
+    flex-basis: 30%;
 }
 
 .feature-item:nth-child(1) {
@@ -102,6 +119,9 @@ body {
     background-color: #fff;
     margin-top: 36px;
     padding: 12px 0 32px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
 }
 
 .wrap-layout__item {
