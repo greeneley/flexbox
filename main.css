@@ -143,11 +143,13 @@ body {
     padding: 32px 0;
     max-width: 640px;
     height: 360px;
+    display: flex;
 }
 
 .center-layout__item {
     font-size: 42px;
     font-weight: 700;
+    margin: auto;
 }
 
 /* Chart layout */
@@ -156,6 +158,9 @@ body {
     padding: 32px 0;
     height: 320px;
     background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
 }
 
 .chart-layout__item {
@@ -164,30 +169,49 @@ body {
     text-align: center;
     height: var(--percent);
     background-color: #EF5122;
+    animation: growth ease-in 0.5s;
+
 }
 
+@keyframes growth {
+    from {
+        opacity: 0;
+        height: calc(var(--percent) / 2);
+    }
+    to {
+        opacity: 1;
+        height: var(--percent);
+    } 
+}
 /* End */
 .the-end {
     margin: 12px auto 48px auto;
     padding: 32px 0;
     max-width: 740px;
     min-height: 360px;
+    display: flex;
 }
 
 .the-end__first {
     padding: 4px 16px;
     background-color: #fff;
+    flex: 1;
 }
 
 .the-end__second {
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .the-end__second-one {
+    flex: 1;
     padding: 4px 16px;
     background-color: rgb(227, 192, 214);
 }
 
 .the-end__second-two {
+    flex: 1;
     padding: 4px 16px;
     background-color: rgb(192, 210, 227);
 }
